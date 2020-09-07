@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>001</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div> 
+        <button>Click Me</button>
+    </div>
+   
+    <script>
+        const btn = document.querySelector('button');
+        btn.addEventListener('click', btnClick);
+
+        function btnClick() {
+            const colors = [ 'red', 'green', 'white', 'yellow', 'orange', 'purple']
+            const rnd = Math.floor(Math.random() * 10);
+            const body = document.querySelector('body');
+            body.style.backgroundColor = colors[rnd];
+        }
+    </script>
+</body>
+</html>
