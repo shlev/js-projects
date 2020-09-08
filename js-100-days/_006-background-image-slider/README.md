@@ -1,3 +1,5 @@
+https://github.com/romeojeremiah/Background-Image-Slider-Project
+
 * Css
 css vaiables
 :root {
@@ -16,4 +18,6 @@ responsivness
 
 * JS
   
-  
+querySelectorAll
+collection.forEach
+string[].container(str)
