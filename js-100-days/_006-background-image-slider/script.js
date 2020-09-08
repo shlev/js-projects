@@ -1,18 +1,35 @@
-( function() {
+// immediate invoked function expression
 
-    const leftBtn = document.querySelector(".left");
-    const rightBtn = document.querySelector(".right");
-    const images = document.querySelector(".images");
-    leftBtn.addEventListener('click', ()=> slideImage(-1));
-    rightBtn.addEventListener('click', ()=> slideImage(1));
-
-    let counter = 0;
-
-    function slideImage(direction) {
-        counter +=direction;
-        if (counter>4) counter = 0;
-        if (counter<0) counter = 4;
-        let imageSrc = "url('images/contBcg-" + counter + ".jpeg'";
-        images.style.backgroundImage = imageSrc;
-    }
-})();
+(function() {
+    const pictures = [
+      "contBcg-0",
+      "contBcg-1",
+      "contBcg-2",
+      "contBcg-3",
+      "contBcg-4"
+    ];
+  
+    //select both left and right button. Add event listeners
+    const buttons = document.querySelectorAll('.btn')
+    const imageDIV = document.querySelector('.img-container')
+    let counter = 0
+  
+    buttons.forEach(function(button){
+      button.addEventListener('click', function(e){
+        if (button.classList.contains('btn-left')){
+          counter--
+          if(counter < 0){
+            counter = pictures.length -1
+          }
+          imageDIV.style.backgroundImage = `url('./images/${pictures[counter]}.jpeg')`
+        }
+        if (button.classList.contains('btn-right')){
+          counter++
+          if(counter > pictures.length -1){
+            counter = 0
+          }
+          imageDIV.style.backgroundImage = `url('./images/${pictures[counter]}.jpeg')`
+        }
+      })
+    })
+  })();
