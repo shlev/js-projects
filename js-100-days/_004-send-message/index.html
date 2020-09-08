@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>004 Send message</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="playground">
+            <form novalidate>
+                <label for="message">A Message you would like to pass</label>
+                <input id="message" name="message" required minlength="6">
+                <button>Submit</button>
+                <p class='error'>Invalid input , please try again</p>
+            </form>
+            
+            <div class="message-title">Last Message Delivered</div>
+            <div class="message-target">Hello World</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
