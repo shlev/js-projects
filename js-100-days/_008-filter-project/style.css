@@ -3,6 +3,7 @@
 }
 * { margin: 0;
 padding: 0;
+box-sizing: border-box;
 }
 .container {
     background: url("img/headerBcg.jpeg") fixed center/cover no-repeat;
@@ -56,11 +57,12 @@ padding: 0;
 
 .home {
     width: 100%;
-    height: 100%;
+    height: calc(100% - 60px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    display: none;
 
 }
 
@@ -92,6 +94,7 @@ padding: 0;
     justify-content: space-around;
     align-items: center;
     position: relative;
+    display: none;
 }
 
 .about-text {
@@ -114,11 +117,21 @@ padding: 0;
     margin-bottom: 5%;
 }
 
-.about-text .btn {
+.btn {
     border: 1px solid black;
-    display: inline-block;
     padding: 4px 10px;
     font-size: 1.2rem;
+    transition: all 1s ease-in-out
+}
+
+.btn:hover {
+    background: black;
+    color: var(--pink);
+}
+
+.about-text .btn {
+    display: inline-block;
+   
 }
 
 .about-image {
@@ -145,3 +158,125 @@ padding: 0;
     left: -15px;
 }
 
+#store {
+    background: rgb(168, 168, 221);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+#store header {
+    font-size: 2.3rem;
+    margin-bottom: 15px;
+}
+
+#store header span {
+    font-size: 3rem;
+    margin-left: 5px;
+    color: var(--pink);
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    margin-bottom: 25px;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.textual {
+    border: 1px solid gray;
+}
+
+.search {
+    background: var(--pink);
+    padding: 5px;
+}
+
+.textual input {
+    padding: 5px;
+    width: 300px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.image {
+    width: 150px;
+    height: 100px;
+    background-size: cover;
+
+}
+
+.image-1 {
+    background-image: url("./img/sweets-1.jpeg") ;
+}
+
+.image-2 {
+    background-image: url("./img/cupcake-1.jpeg") ;
+}
+
+.image-3 {
+    background-image: url("./img/cake-1.jpeg") ;
+}
+
+.image-4 {
+    background-image: url("./img/doughnut-1.jpeg") ;
+}
+
+.image-5 {
+    background-image: url("./img/sweets-2.jpeg") ;
+}
+
+.image-6 {
+    background-image: url("./img/cupcake-2.jpeg") ;
+}
+
+.image-7 {
+    background-image: url("./img/cake-2.jpeg") ;
+}
+
+.image-8 {
+    background-image: url("./img/doughnut-2.jpeg") ;
+}
+
+.image-9 {
+    background-image: url("./img/sweets-3.jpeg") ;
+}
+
+.image-10 {
+    background-image: url("./img/cupcake-3.jpeg") ;
+}
+
+.image-11 {
+    background-image: url("./img/cake-3.jpeg") ;
+}
+
+.image-12 {
+    background-image: url("./img/doughnut-3.jpeg") ;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-data {
+    background: gray;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
