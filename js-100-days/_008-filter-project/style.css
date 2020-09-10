@@ -1,0 +1,147 @@
+:root {
+    --pink: rgb(250, 18, 57)
+}
+* { margin: 0;
+padding: 0;
+}
+.container {
+    background: url("img/headerBcg.jpeg") fixed center/cover no-repeat;
+    height: 100vh;
+    width: 100%;
+}
+
+.header {
+    height: 60px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content:space-between
+}
+
+.brand {
+    background: url("img/logo.svg") no-repeat center/cover;
+    height: 40px;
+    width: 40px;
+    margin-left: 20px;
+}
+
+.nav li{
+    list-style: none;
+    display: inline;
+    color: var( --pink);
+    margin-left: 5px;
+    font-size: 1.2rem;
+    cursor: poiner;
+    transition: color 1s ease-in-out;
+}
+
+.nav li:hover {
+    color: black;
+}
+
+.sells {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.contact {
+    margin-right: 40px
+}
+
+.cart {
+    border: 1px solid black;
+    padding: 7px;
+}
+
+.home {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.home header {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.grandma {
+    font-size: 3rem;
+    color: var(--pink);
+    font-weight: 600;
+}
+
+.home a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.7rem;
+    border: 2px solid black;
+    padding: 4px 12px;
+}
+
+.about {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    background: rgb(236, 220, 220);
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.about-text {
+    width: 30%;
+    font-size: 0.8rem;
+    margin-left: 10%;
+}
+
+.about-text header {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.about-text header span {
+    color: var(--pink);
+    margin-left: 8px;
+}
+
+.about-text p {
+    margin-bottom: 5%;
+}
+
+.about-text .btn {
+    border: 1px solid black;
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 1.2rem;
+}
+
+.about-image {
+    width: 30%;
+    height: 50%;
+    position: relative;
+    margin-right: 10%;
+}
+
+.about-image .image {
+    width: 100%;
+    height: 100%;
+    background: url("./img/sweets-1.jpeg") center/cover;
+    z-index: 10;
+}
+
+.about-image .image:before {
+    content: '';
+    border: 5px solid gold;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -15px;
+    left: -15px;
+}
+
