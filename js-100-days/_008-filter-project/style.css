@@ -62,7 +62,6 @@ box-sizing: border-box;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    display: none;
 
 }
 
@@ -94,7 +93,6 @@ box-sizing: border-box;
     justify-content: space-around;
     align-items: center;
     position: relative;
-    display: none;
 }
 
 .about-text {
@@ -146,15 +144,16 @@ box-sizing: border-box;
     width: 100%;
     height: 100%;
     background: url("./img/sweets-1.jpeg") center/cover;
-    z-index: 10;
+    position:relative;
 }
 
-.about-image .image:before {
+.about-image .image::before {
     content: '';
     border: 5px solid gold;
     width: 100%;
     height: 100%;
     position: absolute;
+    z-index: -1;
     top: -15px;
     left: -15px;
 }
