@@ -1,1 +1,10 @@
 * { margin: 0; padding: 0; box-sizing: border-box;}
+:root {
+    --mainWhite: #ff8;
+}
+.container {
+    background: var(--mainWhite);
+    width: 100%;
+    height: 100vh;
+
+}
