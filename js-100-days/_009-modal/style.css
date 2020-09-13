@@ -1,10 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
 * { margin: 0; padding: 0; box-sizing: border-box;}
 :root {
-    --mainWhite: #ff8;
+    --mainYellow: #ff8;
+    --mainWhite: #fff;
+    --mainPink: #ef7998;
+    --mainBlack: #000;
 }
 .container {
-    background: var(--mainWhite);
+    background: var(--mainYellow);
     width: 100%;
     height: 100vh;
+    font-family: 'Kaushan Script', cursive;
+}
 
+.header {
+    height: 80px;
+    width: 100%;
+    background: var(--mainWhite);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    background: url("img/logo.svg") no-repeat;
+    width: 50px;
+    height: 50px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.nav{
+    list-style: none ;
+    color: var(--mainPink);  
+    font-size: 1.5rem;
+}
+
+.nav li {
+    display: inline-block;
+    margin-right: 30px;
+    cursor: pointer;
+    transition: color 1s ease-in-out;
+}
+
+.nav li:hover {
+    color: var(--mainBlack);
+}
+
+.right {
+    display: flex;
+    margin-right: 3rem;
+    align-items: center;
+
+}
+
+.contact {
+    margin-right: 5rem;
+}
+
+.cart {
+    border: 1px solid var(--mainBlack);
+    border-radius: 5px;
+    padding: 0.7rem;
+    transition: all 1s ease-in-out;
+}
+
+.cart:hover {
+    color: var(--mainWhite);
+    background: var(--mainPink);
 }
