@@ -6,6 +6,7 @@
     --mainWhite: #fff;
     --mainPink: #ef7998;
     --mainBlack: #000;
+    --headerHeight: 80px;
 }
 .container {
     background: var(--mainYellow);
@@ -14,8 +15,10 @@
     font-family: 'Kaushan Script', cursive;
 }
 
+/* Header */
+
 .header {
-    height: 80px;
+    height: var(--headerHeight);
     width: 100%;
     background: var(--mainWhite);
     display: flex;
@@ -70,3 +73,42 @@
     color: var(--mainWhite);
     background: var(--mainPink);
 }
+
+/* End of header*/
+
+/* Home */
+#home {
+    background: url("img/headerBcg.jpeg") center/cover fixed;
+    width: 100%;
+    height: calc( 100% - var(--headerHeight));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home .title {
+    font-size: 4rem;
+    text-transform: capitalize;
+    color: var(--mainWhite);
+}
+
+#home .title span {
+    color: var(--mainPink);
+    font-size: 6rem;
+}
+
+.btn {
+    font-size: 2.5rem;
+    border: 4px solid var(--mainBlack);
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: all 1s ease-in-out;
+}
+
+.btn:hover {
+    background: var(--mainBlack);
+    color: var(--mainPink);
+}
+/* End of Home */
