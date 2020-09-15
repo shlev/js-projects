@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 
-* { margin: 0; padding: 0; box-sizing: border-box;}
+*, ::after, ::before { margin: 0; padding: 0; box-sizing: border-box;}
 :root {
     --mainYellow: #ff8;
     --mainWhite: #fff;
@@ -85,6 +85,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    display: none;
 }
 
 #home .title {
@@ -112,3 +113,114 @@
     color: var(--mainPink);
 }
 /* End of Home */
+
+/* About */
+
+/* End of About */
+
+.about {
+    background: lightblue;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+
+.about-container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1140px;
+}
+
+.about-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.about-text, .about-image {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+    flex: 0 0 50%;
+    position: relative;
+    min-height: 1px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.about-image {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+}
+
+.about-image-container {
+    position: relative;
+    transition: all 1s east-in-out;
+}
+
+.about-image-container img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-style: none;
+    flex: 1 1 auto;
+    position: relative;
+}
+
+.about-image-container::before { 
+    content: "";
+    outline: 0.5rem solid yellow;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -1.5rem;
+    left: -1.7rem;
+    transition: all 1s ease-in-out;
+}
+
+.about-image-container:hover::before { 
+    top: 0;
+    left: 0;
+}
+
+.about-text {
+    padding-right: 5rem;
+    padding-left: 5rem;
+}
+
+.about-text h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.about-text h1 span {
+    font-size: 4rem;
+    color: var(--mainPink);
+    font-weight: 800;
+}
+
+.about-text p {
+    color: #888;
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
+
+.btn {
+    border: 1px solid var(--mainBlack);
+    font-size: 1rem;
+    color: var(--mainBlack);
+}
+
+
