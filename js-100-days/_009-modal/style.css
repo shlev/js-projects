@@ -13,6 +13,7 @@
     width: 100%;
     height: 100vh;
     font-family: 'Kaushan Script', cursive;
+    position: relative;
 }
 
 /* Header */
@@ -270,5 +271,138 @@ input[type="text"] {
     font-family: 'Kaushan Script', cursive;
     outline: none;
     border: 1px #888 solid;
+    width: 500px;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    margin-top: 30px;
+
+}
+
+.image {
+    max-width: 300px;
+    cursor: pointer;
+    position: relative;
+  
+}
+
+.image-container {
+    overflow: hidden;
+    position: relative;
+}
+
+
+.image img {
+    width: 100%;
+    height: auto;
+    transition: all 1s ease-in-out;
+    vertical-align:middle;
+}
+
+.image:hover img {
+    transform: scale(1.5);
+}
+
+.image:hover .store-item-icon {
+    transform: translate(0,0);
+}
+
+
+.image .metadata {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color : var(--mainWhite);
+    width: 100%;
+}
+
+.store-item-icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(100%, 100%);
+    transition: all 1s ease-in-out;
+    background: yellow;
+    padding: 10px;
+    border-top-left-radius: 10px;
+}
+
+.modal {
+    position: fixed;
+    width: 100%;
+    /* height: 100%; */
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: rgba(90, 90, 90, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    height: 80%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.rotate-buttons {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    font-size: 3rem;
+    border: 1px solid black;
+}
+
+
+
+.current-image {
+    background-size: cover;
+    background-image: url(img/cake-3.jpeg);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: bottom;
+}
+
+
+.close-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 1px solid black;
+    padding: 5px 20px;
+    transform: translate(0, -100%);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+}
+
+.close-btn:hover {
+    background: var(--mainPink);
+    color: var(--mainWhite);
+}
+
+.rotate-btn {
+    cursor: pointer;
+}
+
+.rotate-left {
+    transform: translate( -100%, 0);
+}
+
+.rotate-right {
+    transform: translate(100%, 0);
 }
 
