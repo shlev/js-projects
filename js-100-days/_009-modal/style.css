@@ -365,7 +365,7 @@ input[type="text"] {
 
 
 
-.current-image {
+.modal-image {
     background-size: cover;
     background-image: url(img/cake-3.jpeg);
     width: 100%;
@@ -404,5 +404,9 @@ input[type="text"] {
 
 .rotate-right {
     transform: translate(100%, 0);
+}
+
+.hide {
+    display: none;
 }
 
