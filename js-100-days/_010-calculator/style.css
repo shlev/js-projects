@@ -1,0 +1,64 @@
+html, body{ height: 100%; width: 100%;}
+
+*, ::before, ::after { padding: 0; margin: 0; box-sizing: border-box;}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.calc {
+    height: 90%;
+    width: 90%;
+    background: #888;
+    max-width: 1200px;
+    max-height: 800px;
+    display: grid;
+    grid-auto-columns: repeat(4, fr);
+    font-size: 5rem;
+    justify-items: center;
+    align-items: center;
+}
+
+.btn {
+    border: 2px solid black;
+    width: 100%;
+    height: 100%;
+    text-align:center;
+    background-color: #eee;
+    transition: all 1s ease-in-out;
+}
+
+.btn:hover {
+    background-color: blue;
+}
+
+.action {
+    background-color: orange;
+    color: white;
+}
+
+.run { background-color: green;}
+
+.clear { background-color: red; border-color: yellow;}
+
+
+
+.result {
+    grid-column: 1/ span 4;
+}
+
+.result input {
+    height: 100%;
+    width: 100%;
+    /* align-self: center; */
+    /* justify-self: center; */
+    font-size: 7rem;
+    padding: 5px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+}
